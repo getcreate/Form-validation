@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Form for DS academy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic'>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="form-wrapper">
+
+    <div class="form-box">
+        <div class="form-box__title">Задать вопрос</div>
+        
+        <form action="https://digital-spectr.com/ac/academy.php" method="POST" class="form">
+          <div class="form__group">
+            <input type="text" class="input-field" name="name" pattern="^[А-Яа-яЁё\s]*([-][А-Яа-яЁё]*)?\s[А-Яа-яЁё]*([-][А-Яа-яЁё]*)?\s[А-Яа-яЁё]*([-][А-Яа-яЁё]*)?$" title="Поле должно содержать только русские символы. Например: Иванов Сергей Петрович. Разрешенно использовать: " placeholder="Фамилия Имя Отчество *" required>
+            <span class="form__error">Разрешены только русские символы. Введите в формате: Фамилия Имя Отчество</span>
+          </div>
+          <div class="form__group">
+            <input type="tel" class="input-field" name="phone" placeholder="Телефон *" pattern="[- \( \) +0-9]+" title="Разрешено использовать только цифры, “-”, пробелы, “+”" required>
+            <span class="form__error">Разрешено использовать только цифры, “-”, пробелы, “+”</span>
+          </div>
+          <div class="form__group">
+            <input type="email" class="input-field" name="email" placeholder="Email" title="Это поле должно содержать E-Mail в формате example@site.com" required>
+            <span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
+          </div>
+            <input type="submit" class="btn btn--accent btn--full" value="Отправить запрос">
+        </form>
+    </div>
+
+</div>
+  
+</body>
+</html>
